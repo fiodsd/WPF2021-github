@@ -12,3 +12,17 @@ C:\Users\RED\source\repos\FlightClass\FlightClass\obj\Debug\netcoreapp3.1\Flight
 C:\Users\RED\source\repos\FlightClass\FlightClass\obj\Debug\netcoreapp3.1\FlightClass.dll
 C:\Users\RED\source\repos\FlightClass\FlightClass\obj\Debug\netcoreapp3.1\FlightClass.pdb
 C:\Users\RED\source\repos\FlightClass\FlightClass\obj\Debug\netcoreapp3.1\FlightClass.genruntimeconfig.cache
+C:\Users\RED\Desktop\FlightClass\FlightClass\bin\Debug\netcoreapp3.1\FlightClass.exe
+C:\Users\RED\Desktop\FlightClass\FlightClass\bin\Debug\netcoreapp3.1\FlightClass.deps.json
+C:\Users\RED\Desktop\FlightClass\FlightClass\bin\Debug\netcoreapp3.1\FlightClass.runtimeconfig.json
+C:\Users\RED\Desktop\FlightClass\FlightClass\bin\Debug\netcoreapp3.1\FlightClass.runtimeconfig.dev.json
+C:\Users\RED\Desktop\FlightClass\FlightClass\bin\Debug\netcoreapp3.1\FlightClass.dll
+C:\Users\RED\Desktop\FlightClass\FlightClass\bin\Debug\netcoreapp3.1\FlightClass.pdb
+C:\Users\RED\Desktop\FlightClass\FlightClass\obj\Debug\netcoreapp3.1\FlightClass.csproj.AssemblyReference.cache
+C:\Users\RED\Desktop\FlightClass\FlightClass\obj\Debug\netcoreapp3.1\FlightClass.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\RED\Desktop\FlightClass\FlightClass\obj\Debug\netcoreapp3.1\FlightClass.AssemblyInfoInputs.cache
+C:\Users\RED\Desktop\FlightClass\FlightClass\obj\Debug\netcoreapp3.1\FlightClass.AssemblyInfo.cs
+C:\Users\RED\Desktop\FlightClass\FlightClass\obj\Debug\netcoreapp3.1\FlightClass.csproj.CoreCompileInputs.cache
+C:\Users\RED\Desktop\FlightClass\FlightClass\obj\Debug\netcoreapp3.1\FlightClass.dll
+C:\Users\RED\Desktop\FlightClass\FlightClass\obj\Debug\netcoreapp3.1\FlightClass.pdb
+C:\Users\RED\Desktop\FlightClass\FlightClass\obj\Debug\netcoreapp3.1\FlightClass.genruntimeconfig.cache

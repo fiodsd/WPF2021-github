@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\RED\\source\\repos\\FlightClass\\FlightClass\\FlightClass.csproj": {}
+    "C:\\Users\\RED\\Desktop\\FlightClass\\FlightClass\\FlightClass.csproj": {}
   },
   "projects": {
-    "C:\\Users\\RED\\source\\repos\\FlightClass\\FlightClass\\FlightClass.csproj": {
+    "C:\\Users\\RED\\Desktop\\FlightClass\\FlightClass\\FlightClass.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\RED\\source\\repos\\FlightClass\\FlightClass\\FlightClass.csproj",
+        "projectUniqueName": "C:\\Users\\RED\\Desktop\\FlightClass\\FlightClass\\FlightClass.csproj",
         "projectName": "FlightClass",
-        "projectPath": "C:\\Users\\RED\\source\\repos\\FlightClass\\FlightClass\\FlightClass.csproj",
+        "projectPath": "C:\\Users\\RED\\Desktop\\FlightClass\\FlightClass\\FlightClass.csproj",
         "packagesPath": "C:\\Users\\RED\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\RED\\source\\repos\\FlightClass\\FlightClass\\obj\\",
+        "outputPath": "C:\\Users\\RED\\Desktop\\FlightClass\\FlightClass\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\Microsoft Visual Studio\\Shared\\NuGetPackages"
