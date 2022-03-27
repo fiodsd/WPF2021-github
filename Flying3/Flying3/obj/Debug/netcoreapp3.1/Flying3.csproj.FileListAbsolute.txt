@@ -1,0 +1,14 @@
+C:\Users\RED\source\repos\Flying3\Flying3\bin\Debug\netcoreapp3.1\Flying3.exe
+C:\Users\RED\source\repos\Flying3\Flying3\bin\Debug\netcoreapp3.1\Flying3.deps.json
+C:\Users\RED\source\repos\Flying3\Flying3\bin\Debug\netcoreapp3.1\Flying3.runtimeconfig.json
+C:\Users\RED\source\repos\Flying3\Flying3\bin\Debug\netcoreapp3.1\Flying3.runtimeconfig.dev.json
+C:\Users\RED\source\repos\Flying3\Flying3\bin\Debug\netcoreapp3.1\Flying3.dll
+C:\Users\RED\source\repos\Flying3\Flying3\bin\Debug\netcoreapp3.1\Flying3.pdb
+C:\Users\RED\source\repos\Flying3\Flying3\obj\Debug\netcoreapp3.1\Flying3.csproj.AssemblyReference.cache
+C:\Users\RED\source\repos\Flying3\Flying3\obj\Debug\netcoreapp3.1\Flying3.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\RED\source\repos\Flying3\Flying3\obj\Debug\netcoreapp3.1\Flying3.AssemblyInfoInputs.cache
+C:\Users\RED\source\repos\Flying3\Flying3\obj\Debug\netcoreapp3.1\Flying3.AssemblyInfo.cs
+C:\Users\RED\source\repos\Flying3\Flying3\obj\Debug\netcoreapp3.1\Flying3.csproj.CoreCompileInputs.cache
+C:\Users\RED\source\repos\Flying3\Flying3\obj\Debug\netcoreapp3.1\Flying3.dll
+C:\Users\RED\source\repos\Flying3\Flying3\obj\Debug\netcoreapp3.1\Flying3.pdb
+C:\Users\RED\source\repos\Flying3\Flying3\obj\Debug\netcoreapp3.1\Flying3.genruntimeconfig.cache
