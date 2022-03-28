@@ -7,7 +7,7 @@ namespace ConsoleApp1
         const double g = 9.8;
         public void Trajectory()
         {
-            string path1 = @"C:\Users\RED\Desktop\input1.txt";
+            string path1 = @"C:\Users\Dmitry.Solodilov\Desktop\input.txt";
             string[] readEveryLine = new string[7];
             readEveryLine = File.ReadAllLines(path1);
             string sVx_first = readEveryLine[0];// начальная скорость по x
@@ -30,13 +30,13 @@ namespace ConsoleApp1
             double Vx;
             double Vy;
 
-            string path2 = @"C:\Users\RED\Desktop\output1.txt";
+            string path2 = @"C:\Users\Dmitry.Solodilov\Desktop\output.txt";
             if (File.Exists(path2))
                 File.WriteAllText(path2, string.Empty);
             else Console.WriteLine("Не указан файл");
 
-            File.AppendAllText(path2, "Момент времени:" + "\t" + "Координата x:" + "\t" + "Координата y:" + "\n");
-            File.AppendAllText(path2, 0 + "\t\t\t\t" + x_first + "\t\t\t\t" + y_first + "\n");
+            
+            File.AppendAllText(path2,x_first + "\t\t\t\t" + y_first + "\n");
             for (int i = 1; i < 1000; i++)
             {
                

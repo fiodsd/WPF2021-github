@@ -12,3 +12,16 @@ C:\Users\RED\source\repos\Flying3\Flying3\obj\Debug\netcoreapp3.1\Flying3.csproj
 C:\Users\RED\source\repos\Flying3\Flying3\obj\Debug\netcoreapp3.1\Flying3.dll
 C:\Users\RED\source\repos\Flying3\Flying3\obj\Debug\netcoreapp3.1\Flying3.pdb
 C:\Users\RED\source\repos\Flying3\Flying3\obj\Debug\netcoreapp3.1\Flying3.genruntimeconfig.cache
+C:\Users\Dmitry.Solodilov\Desktop\WPF2021-github\Flying3\Flying3\bin\Debug\netcoreapp3.1\Flying3.exe
+C:\Users\Dmitry.Solodilov\Desktop\WPF2021-github\Flying3\Flying3\bin\Debug\netcoreapp3.1\Flying3.deps.json
+C:\Users\Dmitry.Solodilov\Desktop\WPF2021-github\Flying3\Flying3\bin\Debug\netcoreapp3.1\Flying3.runtimeconfig.json
+C:\Users\Dmitry.Solodilov\Desktop\WPF2021-github\Flying3\Flying3\bin\Debug\netcoreapp3.1\Flying3.runtimeconfig.dev.json
+C:\Users\Dmitry.Solodilov\Desktop\WPF2021-github\Flying3\Flying3\bin\Debug\netcoreapp3.1\Flying3.dll
+C:\Users\Dmitry.Solodilov\Desktop\WPF2021-github\Flying3\Flying3\bin\Debug\netcoreapp3.1\Flying3.pdb
+C:\Users\Dmitry.Solodilov\Desktop\WPF2021-github\Flying3\Flying3\obj\Debug\netcoreapp3.1\Flying3.csprojAssemblyReference.cache
+C:\Users\Dmitry.Solodilov\Desktop\WPF2021-github\Flying3\Flying3\obj\Debug\netcoreapp3.1\Flying3.AssemblyInfoInputs.cache
+C:\Users\Dmitry.Solodilov\Desktop\WPF2021-github\Flying3\Flying3\obj\Debug\netcoreapp3.1\Flying3.AssemblyInfo.cs
+C:\Users\Dmitry.Solodilov\Desktop\WPF2021-github\Flying3\Flying3\obj\Debug\netcoreapp3.1\Flying3.csproj.CoreCompileInputs.cache
+C:\Users\Dmitry.Solodilov\Desktop\WPF2021-github\Flying3\Flying3\obj\Debug\netcoreapp3.1\Flying3.dll
+C:\Users\Dmitry.Solodilov\Desktop\WPF2021-github\Flying3\Flying3\obj\Debug\netcoreapp3.1\Flying3.pdb
+C:\Users\Dmitry.Solodilov\Desktop\WPF2021-github\Flying3\Flying3\obj\Debug\netcoreapp3.1\Flying3.genruntimeconfig.cache

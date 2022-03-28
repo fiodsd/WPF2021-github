@@ -1,0 +1,59 @@
+﻿<Window x:Class="WpfApp2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp2"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" Background="{x:Null}">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="239*"/>
+            <ColumnDefinition Width="553*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="294*"/>
+            <RowDefinition Height="125*"/>
+        </Grid.RowDefinitions>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.987,0.312" StartPoint="0.031,0.311">
+                <GradientStop Color="yellow"/>
+                <GradientStop Color="ForestGreen" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        
+        <Path Data="M130.53608,149.28866" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="1" Margin="130.536,149.289,0,0" Stretch="Fill" Stroke="Black" VerticalAlignment="Top" Width="10"/>
+        <Button x:Name = "name" Content="Запустить тело!" Grid.Column="1" Margin="203,86.04,171,175" Click="Button_Click"/>
+        <TextBlock HorizontalAlignment="Left" Height="24.711" Margin="0,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="239" RenderTransformOrigin="0.276,0"><Run Text="Добро пожаловать! "/><Run Text="Введите данные:"/></TextBlock>
+
+        <TextBlock HorizontalAlignment="Left" Height="20" Margin="0,60,0,0" TextWrapping="Wrap" Text="Введите начальную скорость:" VerticalAlignment="Top" Width="239"/>
+        <TextBlock HorizontalAlignment="Left" Height="20" Margin="0,150.289,0,0" TextWrapping="Wrap" Text="Введите стартовую позицию:" VerticalAlignment="Top" Width="239"/>
+        <TextBlock HorizontalAlignment="Left" Height="20" Margin="0,240,0,0" TextWrapping="Wrap" Text="Введите массу вашего объекта:" VerticalAlignment="Top" Width="239"/>
+
+
+        <TextBox x:Name="StPose" Margin="0.29,78,552.46,148" RenderTransformOrigin="0.5,0.5" Grid.ColumnSpan="2">
+            <TextBox.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleX="-0.394"/>
+                    <RotateTransform/>
+                    <TranslateTransform X="0.993"/>
+                </TransformGroup>
+            </TextBox.RenderTransform>
+        </TextBox>
+        
+
+        <TextBox x:Name="StSpeed" Margin="0.29,174,552.46,52" RenderTransformOrigin="0.5,0.5"  Grid.ColumnSpan="2">
+            <TextBox.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleX="-0.394"/>
+                    <RotateTransform/>
+                    <TranslateTransform X="0.993"/>
+                </TransformGroup>
+            </TextBox.RenderTransform>
+        </TextBox>
+        
+              
+    </Grid>
+</Window>
