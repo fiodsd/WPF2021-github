@@ -29,7 +29,7 @@
 
 
         <Path Data="M130.53608,149.28866" Fill="White" HorizontalAlignment="Left" Height="1" Margin="130.536,149.289,0,0" Stretch="Fill" Stroke="Black" VerticalAlignment="Top" Width="10"/>
-        <Button x:Name = "name" Content="Запустить тело!" Grid.Column="1" Margin="203,86.04,171,175" Click="Button_Click"/>
+        <Button x:Name = "name" Content="Запустить тело!" Grid.Column="1" Margin="253,86,200,178" Click="Button_Click" Width="Auto"/>
         <TextBlock HorizontalAlignment="Left" Height="24.711" Margin="0,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="239" RenderTransformOrigin="0.276,0"><Run Text="Добро пожаловать! "/><Run Text="Введите данные:"/></TextBlock>
 
         <TextBlock HorizontalAlignment="Left" Height="20" Margin="0,35,0,0" TextWrapping="Wrap" Text="Введите начальную скорость:" VerticalAlignment="Top" Width="239"/>
