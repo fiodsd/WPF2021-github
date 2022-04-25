@@ -19,50 +19,49 @@ namespace WpfApp2
     {
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            //string StPosextext = StPosex.Text;
-            //string StPoseytext = StPosey.Text;
-            //double stPosex = Convert.ToDouble(StPosextext);
-            //double stPosey = Convert.ToDouble(StPoseytext);//позиция
-            //string Masstext = Mass.Text;
-            //double mass = Convert.ToDouble(Masstext);//масса
             string StSpeedtext = StSpeed.Text;
             string Angletext = Angle.Text;
+            string StPosextext = StPosex.Text;
+            string StPoseytext = StPosey.Text;
+            string Masstext = Mass.Text;
 
-            if ((StSpeedtext != "") && (Angletext != ""))
+            if ((StSpeedtext != "") && (Angletext != "") && (StPosextext != "") && (StPoseytext != "") && (Masstext != ""))
             {
                 double stSpeed = Convert.ToDouble(StSpeedtext);
                 double angle = Convert.ToDouble(Angletext);
+                double Posex = Convert.ToDouble(StPosextext);
+                double Posey = Convert.ToDouble(StPoseytext);
+                double mass = Convert.ToDouble(Masstext);
                 const double g = 9.8;
                 angle *= Math.PI / 180;
-                double t = 2 * stSpeed * Math.Sin(angle) / g;
-                double t_c_double = Math.Round(t) * 10;
-                int t_c = Convert.ToInt32(t_c_double);
-                if (t < 0.5)
-                    t_c = 10;
-                double[] Coord_y = new double[t_c];
-                double[] Coord_x = new double[t_c];
-                double value_x;
-                double value_y;
+                double stSpeedx = stSpeed * Math.Cos(angle);
+                double stSpeedy = stSpeed * Math.Sin(angle);
+                double x;
+                double y;
+                double Speedx;
+                double Speedy;
+                double delta_t = 0.1;
+                double k = 0.1;
 
-                for (int i = 0; i < t_c; i++)
+                for (int i = 1; i < 1000; i++)
                 {
-                    value_x = stSpeed * t / t_c * i * Math.Cos(angle);
-                    value_y = stSpeed * t / t_c * i * Math.Sin(angle) - g * Math.Pow(t / t_c * i, 2) / 2;
-                    Coord_x[i] = value_x;
-                    Coord_y[i] = value_y;
+
+                    x = Posex + delta_t * stSpeedx;
+                    Speedx = stSpeedx - delta_t * k * stSpeedx / mass;
+                    Posex = x;
+                    stSpeedx = Speedx;
+                    y = Posey + delta_t * stSpeedy;
+                    Speedy = stSpeedy - delta_t * (g + k * stSpeedy / mass);
+                    Posey = y;
+                    stSpeedy = Speedy;
+                    if (y < 0)
+                    {
+                        y = 0;
+                        MessageBox.Show("Начальная скорость: " + StSpeedtext + "   " + "Угол: " + Angletext + "   " + "Начальная позиция по x: " + StPosextext + "   " + "Начальная позиция по y: " + StPoseytext + "   " + "Масса: " + Masstext);
+                        MessageBox.Show("Конечная позиция по x: " + Math.Round(x, 3) + "   " + "Конечная позиция по y: " + Math.Round(y, 3) + "   " + "Момент времени: " + Math.Round(delta_t*i, 3));
+                        break;
+                    }
                 }
-                value_x = stSpeed * t * Math.Cos(angle);
-                value_y = stSpeed * t * Math.Sin(angle) - g * Math.Pow(t, 2) / 2;
-                if (value_y < 0) value_y = 0;
-
-
-                MessageBox.Show("Начальная скорость: " + StSpeedtext + "   " + "Угол: " + Angletext);
-                MessageBox.Show("Конечная позиция по x: " + Math.Round(value_x, 3) + "   " + "Конечная позиция по y: " + Math.Round(value_y, 3) + "   " + "Момент времени: " + Math.Round(t, 3));
-                //double multipliation = stPosex * stSpeed;
-                //string multipliation_text = Convert.ToString(multipliation);
-                //MessageBox.Show(multipliation_text);
-                //double.TryParse(multipliation_text, out double b);
-
             }
             else
             {
@@ -132,3 +131,29 @@ namespace WpfApp2
 //    }
 //    File.AppendAllText(path2, delta_t * i + "\t\t\t\t" + Math.Round(x, 3) + "\t\t\t\t" + Math.Round(y, 3) + "\n");
 //}
+//for (int i = 0; i < t_c; i++)
+//{
+//    value_x = stSpeed * t / t_c * i * Math.Cos(angle);
+//    value_y = stSpeed * t / t_c * i * Math.Sin(angle) - g * Math.Pow(t / t_c * i, 2) / 2;
+//    Coord_x[i] = value_x;
+//    Coord_y[i] = value_y;
+//}
+//value_x = stSpeed * t * Math.Cos(angle);
+//value_y = stSpeed * t * Math.Sin(angle) - g * Math.Pow(t, 2) / 2;
+//if (value_y < 0) value_y = 0;
+
+
+//MessageBox.Show("Начальная скорость: " + StSpeedtext + "   " + "Угол: " + Angletext);
+//MessageBox.Show("Конечная позиция по x: " + Math.Round(value_x, 3) + "   " + "Конечная позиция по y: " + Math.Round(value_y, 3) + "   " + "Момент времени: " + Math.Round(t, 3));
+//double multipliation = stPosex * stSpeed;
+//string multipliation_text = Convert.ToString(multipliation);
+//MessageBox.Show(multipliation_text);
+//double.TryParse(multipliation_text, out double b);
+
+//double t = 2 * stSpeed * Math.Sin(angle) / g;
+//double t_c_double = Math.Round(t) * 10;
+//int t_c = Convert.ToInt32(t_c_double);
+//if (t < 0.5)
+//t_c = 10;
+//double[] Coord_y = new double[t_c];
+//double[] Coord_x = new double[t_c];
