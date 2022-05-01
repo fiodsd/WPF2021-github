@@ -15,6 +15,7 @@ using System.Windows.Shapes;
 
 namespace WpfApp2
 {
+   
     public partial class MainWindow : Window
     {
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -42,6 +43,8 @@ namespace WpfApp2
                 double Speedy;
                 double delta_t = 0.1;
                 double k = 0.1;
+                double[] arrx = new double[1000];
+                double[] arry = new double[1000];
 
                 for (int i = 1; i < 1000; i++)
                 {
@@ -50,15 +53,24 @@ namespace WpfApp2
                     Speedx = stSpeedx - delta_t * k * stSpeedx / mass;
                     Posex = x;
                     stSpeedx = Speedx;
+                    arrx[i] = x;
                     y = Posey + delta_t * stSpeedy;
                     Speedy = stSpeedy - delta_t * (g + k * stSpeedy / mass);
                     Posey = y;
                     stSpeedy = Speedy;
+                    arry[i] = y;
                     if (y < 0)
                     {
                         y = 0;
                         MessageBox.Show("Начальная скорость: " + StSpeedtext + "   " + "Угол: " + Angletext + "   " + "Начальная позиция по x: " + StPosextext + "   " + "Начальная позиция по y: " + StPoseytext + "   " + "Масса: " + Masstext);
                         MessageBox.Show("Конечная позиция по x: " + Math.Round(x, 3) + "   " + "Конечная позиция по y: " + Math.Round(y, 3) + "   " + "Момент времени: " + Math.Round(delta_t*i, 3));
+                        for (int j = 0; j < i; j++)
+                        {
+                            MessageBox.Show("Позиция по x: " + arrx[j] + "   " + "Позиция по y: " + arry[j]);
+                        }
+                            Window1 Window1 = new Window1();
+                            Window1.Show();
+                        
                         break;
                     }
                 }
