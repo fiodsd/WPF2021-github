@@ -9,14 +9,18 @@
     <Window.Background>
         <ImageBrush ImageSource ="Images/3.jpg" />
     </Window.Background>
+
+
+
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="239*"/>
             <ColumnDefinition Width="553*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="294*"/>
-            <RowDefinition Height="125*"/>
+            <RowDefinition Height="47*"/>
+            <RowDefinition Height="155"/>
+            <RowDefinition Height="41*"/>
         </Grid.RowDefinitions>
 
         <!--<Grid.Background>
@@ -28,71 +32,80 @@
 
 
 
-        <Path Data="M130.53608,149.28866" Fill="White" HorizontalAlignment="Left" Height="1" Margin="130.536,149.289,0,0" Stretch="Fill" Stroke="Black" VerticalAlignment="Top" Width="10"/>
-        <Button x:Name = "name" Content="Запустить тело!" Grid.Column="1" Margin="253,86,200,178" Click="Button_Click" Width="Auto"/>
-        <TextBlock HorizontalAlignment="Left" Height="24.711" Margin="0,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="239" RenderTransformOrigin="0.276,0"><Run Text="Добро пожаловать! "/><Run Text="Введите данные:"/></TextBlock>
+        <Path Data="M130.53608,149.28866" Fill="White" HorizontalAlignment="Left" Height="1" Margin="130.536,8.784,0,0" Stretch="Fill" Stroke="Black" VerticalAlignment="Top" Width="10" Grid.Row="1"/>
+        <Button x:Name = "name" Content="Запустить тело!" Grid.Column="1" Margin="253,86,200,22.505" Click="Button_Click" Width="Auto"/>
+        <TextBlock HorizontalAlignment="Left" Height="25" Margin="0,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="239" RenderTransformOrigin="0.276,0"><Run Text="Добро пожаловать! "/><Run Text="Введите данные:"/></TextBlock>
 
         <TextBlock HorizontalAlignment="Left" Height="20" Margin="0,35,0,0" TextWrapping="Wrap" Text="Введите начальную скорость:" VerticalAlignment="Top" Width="239"/>
-        <TextBlock HorizontalAlignment="Left" Height="20" Margin="0,169,0,0" TextWrapping="Wrap" Text="Введите стартовую позицию по x:" VerticalAlignment="Top" Width="239"/>
+        <TextBlock HorizontalAlignment="Left" Height="20" Margin="0,28.495,0,0" TextWrapping="Wrap" Text="Введите стартовую позицию по x:" VerticalAlignment="Top" Width="239" Grid.Row="1"/>
         <TextBlock HorizontalAlignment="Left" Height="20" Margin="0,73,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="239"><Run Text="Введите "/><Run Text="угол"/><Run Text=":"/></TextBlock>
-        <TextBlock HorizontalAlignment="Left" Height="20" Margin="0,243,0,0" TextWrapping="Wrap" Text="Введите массу тела:" VerticalAlignment="Top" Width="239"/>
-        <TextBlock HorizontalAlignment="Left" Height="20" Margin="0,205,0,0" TextWrapping="Wrap" Text="Введите стартовую позицию по y:" VerticalAlignment="Top" Width="239"/>
-        <TextBlock HorizontalAlignment="Left" Height="20" Margin="0,149,0,0" TextWrapping="Wrap" Text="Дополнительные данные:" VerticalAlignment="Top" Width="239"/>
+        <TextBlock HorizontalAlignment="Left" Height="20" Margin="0,102.495,0,0" TextWrapping="Wrap" Text="Введите массу тела:" VerticalAlignment="Top" Width="239" Grid.Row="1"/>
+        <TextBlock HorizontalAlignment="Left" Height="20" Margin="0,64.495,0,0" TextWrapping="Wrap" Text="Введите стартовую позицию по y:" VerticalAlignment="Top" Width="239" Grid.Row="1"/>
+        <TextBlock HorizontalAlignment="Left" Height="20" Margin="0,8.495,0,0" TextWrapping="Wrap" Text="Дополнительные данные:" VerticalAlignment="Top" Width="239" Grid.Row="1"/>
 
-        <TextBox x:Name="StSpeed" Margin="0,51,552,223" RenderTransformOrigin="0.5,0.5" Grid.ColumnSpan="2">
+        <TextBox x:Name="StSpeed" Margin="0,51,552,67.505" RenderTransformOrigin="0.5,0.5" Grid.ColumnSpan="2">
             <TextBox.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
                     <SkewTransform AngleX="-0.394"/>
                     <RotateTransform/>
-                    <TranslateTransform X="0.993"/>
+                    <TranslateTransform X="1"/>
                 </TransformGroup>
             </TextBox.RenderTransform>
         </TextBox>
 
-        <TextBox x:Name="Angle" Margin="0,90,552,184" RenderTransformOrigin="0.5,0.5" Grid.ColumnSpan="2">
+        <TextBox x:Name="Angle" Margin="0,90,552,28.505" RenderTransformOrigin="0.5,0.5" Grid.ColumnSpan="2">
             <TextBox.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
                     <SkewTransform AngleX="-0.394"/>
                     <RotateTransform/>
-                    <TranslateTransform X="0.993"/>
+                    <TranslateTransform X="1"/>
                 </TransformGroup>
             </TextBox.RenderTransform>
         </TextBox>
 
-        <TextBox x:Name="StPosex" Margin="0,184,552,90" RenderTransformOrigin="0.5,0.5" Grid.ColumnSpan="2">
+        <TextBox x:Name="StPosex" Margin="0,43.495,552,90" RenderTransformOrigin="0.5,0.5" Grid.ColumnSpan="2" Grid.Row="1">
             <TextBox.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
                     <SkewTransform AngleX="-0.394"/>
                     <RotateTransform/>
-                    <TranslateTransform X="0.993"/>
+                    <TranslateTransform X="1"/>
                 </TransformGroup>
             </TextBox.RenderTransform>
         </TextBox>
 
-        <TextBox x:Name="StPosey" Margin="0,223,552,51" RenderTransformOrigin="0.5,0.5" Grid.ColumnSpan="2">
+        <TextBox x:Name="StPosey" Margin="0,82.495,552,51" RenderTransformOrigin="0.5,0.5" Grid.ColumnSpan="2" Grid.Row="1">
             <TextBox.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
                     <SkewTransform AngleX="-0.394"/>
                     <RotateTransform/>
-                    <TranslateTransform X="0.993"/>
+                    <TranslateTransform X="1"/>
                 </TransformGroup>
             </TextBox.RenderTransform>
         </TextBox>
 
-        <TextBox x:Name="Mass" Margin="0,261,552,13" RenderTransformOrigin="0.5,0.5" Grid.ColumnSpan="2">
+        <TextBox x:Name="Mass" Margin="0,120.495,552,13" RenderTransformOrigin="0.5,0.5" Grid.ColumnSpan="2" Grid.Row="1">
             <TextBox.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
-                    <SkewTransform AngleX="-0.394"/>
+                    <SkewTransform AngleX="-0.395"/>
                     <RotateTransform/>
-                    <TranslateTransform X="0.993"/>
+                    <TranslateTransform X="1"/>
                 </TransformGroup>
             </TextBox.RenderTransform>
         </TextBox>
+
+        <Canvas x:Name="Bird1" Grid.RowSpan="2" HorizontalAlignment="Right" Width="239">
+            <Ellipse x:Name="Bird" Fill="Red" Width="28" Height="28" Canvas.Left="0" Canvas.Top="390" RenderTransformOrigin="0.519,0.466" />
+        </Canvas>
+        
+        <Canvas x:Name="Stone1" Grid.RowSpan="2" HorizontalAlignment="Right" Width="239">
+            <Rectangle x:Name="Stone" Fill="Black" Width="50" Height="50" Canvas.Left="740" Canvas.Top="365" RenderTransformOrigin="0.519,0.466" />
+        </Canvas>
+
 
     </Grid>
 </Window>

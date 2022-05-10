@@ -15,9 +15,46 @@ using System.Windows.Shapes;
 
 namespace WpfApp2
 {
-   
+    //public partial class Window1 : Window
+    //{
+
+    //    private void Button_Click(object sender, RoutedEventArgs e)
+    //    {
+    //        Birds();
+    //    }
+    //    public Window1()
+    //    {
+    //        InitializeComponent();
+    //    }
+
+
+    //    public async void Birds()
+    //    {
+
+    //        Canvas.SetLeft(Bird, 200);
+    //        Canvas.SetTop(Bird, 220);
+    //        int i = 0;
+    //        while (i < 400)
+    //        {
+    //            await Task.Delay(1000);
+    //            Canvas.SetLeft(Bird, i);
+    //            Canvas.SetTop(Bird, i / 2);
+    //            i += 20;
+
+    //        }
+    //    }
+    //}
+
+
+
+
+
+
+
     public partial class MainWindow : Window
     {
+        double[] arrx = new double[1000];
+        double[] arry = new double[1000];
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             string StSpeedtext = StSpeed.Text;
@@ -43,9 +80,10 @@ namespace WpfApp2
                 double Speedy;
                 double delta_t = 0.1;
                 double k = 0.1;
-                double[] arrx = new double[1000];
-                double[] arry = new double[1000];
-
+                //double[] arrx = new double[1000];
+                //double[] arry = new double[1000];
+                arrx[0] = Posex;
+                arry[0] = Posey;
                 for (int i = 1; i < 1000; i++)
                 {
 
@@ -53,24 +91,24 @@ namespace WpfApp2
                     Speedx = stSpeedx - delta_t * k * stSpeedx / mass;
                     Posex = x;
                     stSpeedx = Speedx;
-                    arrx[i] = x;
+                    arrx[i] = Math.Round(x, 3);
                     y = Posey + delta_t * stSpeedy;
                     Speedy = stSpeedy - delta_t * (g + k * stSpeedy / mass);
                     Posey = y;
                     stSpeedy = Speedy;
-                    arry[i] = y;
+                    arry[i] = Math.Round(y, 3);
                     if (y < 0)
                     {
                         y = 0;
                         MessageBox.Show("Начальная скорость: " + StSpeedtext + "   " + "Угол: " + Angletext + "   " + "Начальная позиция по x: " + StPosextext + "   " + "Начальная позиция по y: " + StPoseytext + "   " + "Масса: " + Masstext);
-                        MessageBox.Show("Конечная позиция по x: " + Math.Round(x, 3) + "   " + "Конечная позиция по y: " + Math.Round(y, 3) + "   " + "Момент времени: " + Math.Round(delta_t*i, 3));
-                        for (int j = 0; j < i; j++)
-                        {
-                            MessageBox.Show("Позиция по x: " + arrx[j] + "   " + "Позиция по y: " + arry[j]);
-                        }
-                            Window1 Window1 = new Window1();
-                            Window1.Show();
-                        
+                        MessageBox.Show("Конечная позиция по x: " + Math.Round(x * 0.8, 3) + "   " + "Конечная позиция по y: " + Math.Round(380- y * 0.8, 3) + "   " + "Момент времени: " + Math.Round(delta_t * i, 3));
+                        //for (int j = 0; j < i; j++)
+                        //{
+                        //    MessageBox.Show("Позиция по x: " + arrx[j] + "   " + "Позиция по y: " + arry[j]);
+                        //}
+                        //Window1 Window1 = new Window1();
+                        //Window1.Show();
+                        Birds();
                         break;
                     }
                 }
@@ -79,14 +117,81 @@ namespace WpfApp2
             {
                 MessageBox.Show("Enter your text!");
             }
+           
         }
         public MainWindow()
         {
             InitializeComponent();
         }
+      
+        public async void Birds()
+        {
+            string StPosextext = StPosex.Text;
+            string StPoseytext = StPosey.Text;
+            double Posex = Convert.ToDouble(StPosextext);
+            double Posey = Convert.ToDouble(StPoseytext);
+            double[] stonex = new double[1000];
+            double[] stoney = new double[1000];
+            int sx = 715;
+            int sy = 365;
+            for (int k = 0; k < 50; k++)
+            {
+                sx += 1;
+                sy += 1;
+                stonex[k] = sx;
+                stoney[k] = sy;
+            }
+            //for (int k = 0; k < 50; k++)
+            //{
+            //    MessageBox.Show("Позиция по x: " + stonex[k] + "   " + "Позиция по y: " + stoney[k]);
+            //}
+            Canvas.SetLeft(Bird, Posex);
+            Canvas.SetTop(Bird, 380 - Posey);
+            int i = 0;
+            int j = 780;
+            await Task.Delay(1000);
+            while (i < 1000 || j > 0)
+            {
+                double canvasx = arrx[i] * 0.8;
+                double canvasy = 380 - arry[i] * 0.8;
+                await Task.Delay(10);
+                Canvas.SetLeft(Bird, canvasx);
+                Canvas.SetTop(Bird, canvasy);
+                i += 1;
+                j -= 1;
+                bool target_hit = false;
+                //MessageBox.Show(Math.Round(canvasx, 0) + "   " + Math.Round(canvasy, 0));
+
+                for (int k = 0; k < 50; k++)
+                {
+                    for (int l = 0; l < 50; l++)
+                    {
+
+                        if ((Math.Round(canvasx, 0) == stonex[k]) && (Math.Round(canvasy, 0) == stoney[l]))
+                        {
+                            MessageBox.Show("Цель поражена");
+                            target_hit = true;
+                            break;
+                        }
+                    }
+                }
+                if (target_hit)
+                {
+                    Canvas.SetLeft(Bird, Posex);
+                    Canvas.SetTop(Bird, 380 - Posey);
+                    break;
+                }
+            }
+            //MessageBox.Show("Конечная позиция по x: " + Math.Round(canvasx, 3) + "   " + "Конечная позиция по y: " + Math.Round(y, 3) + "   " + "Момент времени: " + Math.Round(delta_t * i, 3));
+        }
 
     }
+    
+
+
 }
+
+
 
 
 
