@@ -12,6 +12,9 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Microsoft.Win32;
+using System.IO;
+using System.Xml;
 
 namespace WpfApp2
 {
@@ -46,79 +49,132 @@ namespace WpfApp2
     //}
 
 
-
-
-
-
-
     public partial class MainWindow : Window
     {
+        bool verification = false;
+        bool verification_pass = false;
         double[] arrx = new double[1000];
         double[] arry = new double[1000];
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+
             string StSpeedtext = StSpeed.Text;
             string Angletext = Angle.Text;
             string StPosextext = StPosex.Text;
             string StPoseytext = StPosey.Text;
             string Masstext = Mass.Text;
+            if ((StPosextext.Length == 0) || (StPosextext == null))
+                StPosextext = "0";
+            if ((StPoseytext.Length == 0) || (StPoseytext == null))
+                StPoseytext = "0";
+            if ((Masstext.Length == 0) || (Masstext == null))
+                Masstext = "1";
 
-            if ((StSpeedtext != "") && (Angletext != "") && (StPosextext != "") && (StPoseytext != "") && (Masstext != ""))
+            if (verification)
             {
-                double stSpeed = Convert.ToDouble(StSpeedtext);
-                double angle = Convert.ToDouble(Angletext);
-                double Posex = Convert.ToDouble(StPosextext);
-                double Posey = Convert.ToDouble(StPoseytext);
-                double mass = Convert.ToDouble(Masstext);
-                const double g = 9.8;
-                angle *= Math.PI / 180;
-                double stSpeedx = stSpeed * Math.Cos(angle);
-                double stSpeedy = stSpeed * Math.Sin(angle);
-                double x;
-                double y;
-                double Speedx;
-                double Speedy;
-                double delta_t = 0.1;
-                double k = 0.1;
-                //double[] arrx = new double[1000];
-                //double[] arry = new double[1000];
-                arrx[0] = Posex;
-                arry[0] = Posey;
-                for (int i = 1; i < 1000; i++)
+                if ((StSpeedtext != "") && (Angletext != ""))
                 {
-
-                    x = Posex + delta_t * stSpeedx;
-                    Speedx = stSpeedx - delta_t * k * stSpeedx / mass;
-                    Posex = x;
-                    stSpeedx = Speedx;
-                    arrx[i] = Math.Round(x, 3);
-                    y = Posey + delta_t * stSpeedy;
-                    Speedy = stSpeedy - delta_t * (g + k * stSpeedy / mass);
-                    Posey = y;
-                    stSpeedy = Speedy;
-                    arry[i] = Math.Round(y, 3);
-                    if (y < 0)
+                    double stSpeed = Convert.ToDouble(StSpeedtext);
+                    double angle = Convert.ToDouble(Angletext);
+                    double Posex = Convert.ToDouble(StPosextext);
+                    double Posey = Convert.ToDouble(StPoseytext);
+                    double mass = Convert.ToDouble(Masstext);
+                    const double g = 9.8;
+                    angle *= Math.PI / 180;
+                    double stSpeedx = stSpeed * Math.Cos(angle);
+                    double stSpeedy = stSpeed * Math.Sin(angle);
+                    double x;
+                    double y;
+                    double Speedx;
+                    double Speedy;
+                    double delta_t = 0.1;
+                    double k = 0.1;
+                    //double[] arrx = new double[1000];
+                    //double[] arry = new double[1000];
+                    arrx[0] = Posex;
+                    arry[0] = Posey;
+                    for (int i = 1; i < 1000; i++)
                     {
-                        y = 0;
-                        MessageBox.Show("Начальная скорость: " + StSpeedtext + "   " + "Угол: " + Angletext + "   " + "Начальная позиция по x: " + StPosextext + "   " + "Начальная позиция по y: " + StPoseytext + "   " + "Масса: " + Masstext);
-                        MessageBox.Show("Конечная позиция по x: " + Math.Round(x * 0.8, 3) + "   " + "Конечная позиция по y: " + Math.Round(380- y * 0.8, 3) + "   " + "Момент времени: " + Math.Round(delta_t * i, 3));
-                        //for (int j = 0; j < i; j++)
-                        //{
-                        //    MessageBox.Show("Позиция по x: " + arrx[j] + "   " + "Позиция по y: " + arry[j]);
-                        //}
-                        //Window1 Window1 = new Window1();
-                        //Window1.Show();
-                        Birds();
-                        break;
+
+                        x = Posex + delta_t * stSpeedx;
+                        Speedx = stSpeedx - delta_t * k * stSpeedx / mass;
+                        Posex = x;
+                        stSpeedx = Speedx;
+                        arrx[i] = Math.Round(x, 3);
+                        y = Posey + delta_t * stSpeedy;
+                        Speedy = stSpeedy - delta_t * (g + k * stSpeedy / mass);
+                        Posey = y;
+                        stSpeedy = Speedy;
+                        arry[i] = Math.Round(y, 3);
+                        if (y < 0)
+                        {
+                            y = 0;
+                            MessageBox.Show("Начальная скорость: " + StSpeedtext + "   " + "Угол: " + Angletext + "   " + "Начальная позиция по x: " + StPosextext + "   " + "Начальная позиция по y: " + StPoseytext + "   " + "Масса: " + Masstext);
+                            MessageBox.Show("Конечная позиция по x: " + Math.Round(x * 0.8, 3) + "   " + "Конечная позиция по y: " + Math.Round(380 - y * 0.8, 3) + "   " + "Момент времени: " + Math.Round(delta_t * i, 3));
+                            //for (int j = 0; j < i; j++)
+                            //{
+                            //    MessageBox.Show("Позиция по x: " + arrx[j] + "   " + "Позиция по y: " + arry[j]);
+                            //}
+                            //Window1 Window1 = new Window1();
+                            //Window1.Show();
+                            Birds();
+                            break;
+                        }
                     }
+                }
+                else
+                {
+                    MessageBox.Show("Enter your text!");
                 }
             }
             else
             {
-                MessageBox.Show("Enter your text!");
+                MessageBox.Show("Pass the verification");
             }
-           
+            
         }
+
+        private void Login_Click(object sender, RoutedEventArgs e)
+        {
+            if (verification_pass == false)
+            {
+                Window1 authorizationWindow = new Window1();
+                if (authorizationWindow.ShowDialog() == true)
+                {
+                    if (authorizationWindow.Password == "123")
+                    {
+                        MessageBox.Show("Authorization was successful");
+                        verification = true;
+                        verification_pass = true;
+                    }
+                    else
+                        MessageBox.Show("Wrong password");
+                }
+                else
+                {
+                    MessageBox.Show("Authorization failed");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Restart the game");
+            }
+
+
+        }
+
+        private void Password_Click(object sender, RoutedEventArgs e)
+        {
+          
+                Window2 passwordWindow = new Window2();
+                passwordWindow.ShowDialog();
+        }
+
+        private void Exit_Click(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Shutdown();
+        }
+
         public MainWindow()
         {
             InitializeComponent();
@@ -128,6 +184,10 @@ namespace WpfApp2
         {
             string StPosextext = StPosex.Text;
             string StPoseytext = StPosey.Text;
+            if ((StPosextext.Length == 0) || (StPosextext == null))
+                StPosextext = "0";
+            if ((StPoseytext.Length == 0) || (StPoseytext == null))
+                StPoseytext = "0";
             double Posex = Convert.ToDouble(StPosextext);
             double Posey = Convert.ToDouble(StPoseytext);
             double[] stonex = new double[1000];
@@ -141,10 +201,7 @@ namespace WpfApp2
                 stonex[k] = sx;
                 stoney[k] = sy;
             }
-            //for (int k = 0; k < 50; k++)
-            //{
-            //    MessageBox.Show("Позиция по x: " + stonex[k] + "   " + "Позиция по y: " + stoney[k]);
-            //}
+
             Canvas.SetLeft(Bird, Posex);
             Canvas.SetTop(Bird, 380 - Posey);
             int i = 0;
@@ -185,6 +242,10 @@ namespace WpfApp2
             //MessageBox.Show("Конечная позиция по x: " + Math.Round(canvasx, 3) + "   " + "Конечная позиция по y: " + Math.Round(y, 3) + "   " + "Момент времени: " + Math.Round(delta_t * i, 3));
         }
 
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
     
 

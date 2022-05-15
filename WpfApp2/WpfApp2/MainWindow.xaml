@@ -12,6 +12,7 @@
 
 
 
+
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="239*"/>
@@ -33,7 +34,7 @@
 
 
         <Path Data="M130.53608,149.28866" Fill="White" HorizontalAlignment="Left" Height="1" Margin="130.536,8.784,0,0" Stretch="Fill" Stroke="Black" VerticalAlignment="Top" Width="10" Grid.Row="1"/>
-        <Button x:Name = "name" Content="Запустить тело!" Grid.Column="1" Margin="253,86,200,22.505" Click="Button_Click" Width="Auto"/>
+        <Button x:Name = "name" Content="Запустить тело!" Grid.Column="1" Margin="185,73,268,38" Click="Button_Click" Width="Auto"/>
         <TextBlock HorizontalAlignment="Left" Height="25" Margin="0,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="239" RenderTransformOrigin="0.276,0"><Run Text="Добро пожаловать! "/><Run Text="Введите данные:"/></TextBlock>
 
         <TextBlock HorizontalAlignment="Left" Height="20" Margin="0,35,0,0" TextWrapping="Wrap" Text="Введите начальную скорость:" VerticalAlignment="Top" Width="239"/>
@@ -101,10 +102,15 @@
         <Canvas x:Name="Bird1" Grid.RowSpan="2" HorizontalAlignment="Right" Width="239">
             <Ellipse x:Name="Bird" Fill="Red" Width="28" Height="28" Canvas.Left="0" Canvas.Top="390" RenderTransformOrigin="0.519,0.466" />
         </Canvas>
-        
+
         <Canvas x:Name="Stone1" Grid.RowSpan="2" HorizontalAlignment="Right" Width="239">
             <Rectangle x:Name="Stone" Fill="Black" Width="50" Height="50" Canvas.Left="740" Canvas.Top="365" RenderTransformOrigin="0.519,0.466" />
         </Canvas>
+
+
+        <Button Width="100" Height="30" Content="Авторизация" Click="Login_Click" Grid.Column="1" Margin="443,10,10,101" />
+        <Button Width="100" Height="30" Content="Выход" Click="Exit_Click" Margin="443,45,10,66" Grid.Column="1" />
+        <Button Width="Auto" Height="30" Content="Пароль" Click="Password_Click" Margin="388,10,115,101" Grid.Column="1" />
 
 
     </Grid>

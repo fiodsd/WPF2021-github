@@ -5,14 +5,24 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp2"
         mc:Ignorable="d"
-        Title="Window1" Height="250" Width="300">
-    <Window.Background>
+    Title="Авторизация" SizeToContent="WidthAndHeight" WindowStartupLocation="CenterScreen">
+     <Window.Background>
         <ImageBrush ImageSource ="Images/3.jpg" />
     </Window.Background>
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20" />
+            <RowDefinition Height="20" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
 
+        <TextBlock>Введите пароль:</TextBlock>
+        <TextBox Name="passwordBox" Grid.Row="1" MinWidth="250"> </TextBox>
 
-    
-    <!--<Grid>
-        
-    </Grid>-->
+        <WrapPanel Grid.Row="2" HorizontalAlignment="Right" Margin="0,15,0,0">
+            <Button IsDefault="True" Click="Accept_Click" MinWidth="60" Margin="0,0,10,0">OK</Button>
+            <Button IsCancel="True" MinWidth="60">Отмена</Button>
+        </WrapPanel>
+
+    </Grid>
 </Window>

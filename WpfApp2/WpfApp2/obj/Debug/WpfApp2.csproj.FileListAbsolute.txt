@@ -96,3 +96,7 @@ C:\Users\RED\Desktop\Новая папка (5)\WPF2021-github\WpfApp2\WpfApp2\ob
 C:\Users\RED\Desktop\Новая папка (5)\WPF2021-github\WpfApp2\WpfApp2\obj\Debug\WpfApp2.Properties.Resources.resources
 C:\Users\RED\Desktop\Новая папка (5)\WPF2021-github\WpfApp2\WpfApp2\obj\Debug\WpfApp2.csproj.GenerateResource.cache
 C:\Users\RED\Desktop\Новая папка (5)\WPF2021-github\WpfApp2\WpfApp2\obj\Debug\WpfApp2.csproj.CoreCompileInputs.cache
+C:\Users\RED\Desktop\Новая папка (4)\WPF2021-github\WpfApp2\WpfApp2\obj\Debug\Window1.g.cs
+C:\Users\RED\Desktop\Новая папка (4)\WPF2021-github\WpfApp2\WpfApp2\obj\Debug\Window1.baml
+C:\Users\RED\Desktop\Новая папка (4)\WPF2021-github\WpfApp2\WpfApp2\obj\Debug\Window2.g.cs
+C:\Users\RED\Desktop\Новая папка (4)\WPF2021-github\WpfApp2\WpfApp2\obj\Debug\Window2.baml
