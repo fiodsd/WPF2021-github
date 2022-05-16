@@ -11,12 +11,11 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.IO;
+using Microsoft.Win32;
 
 namespace WpfApp2
 {
-    /// <summary>
-    /// Логика взаимодействия для Window2.xaml
-    /// </summary>
     public partial class Window2 : Window
     {
         public Window2()
@@ -24,4 +23,6 @@ namespace WpfApp2
             InitializeComponent();
         }
     }
+
+
 }

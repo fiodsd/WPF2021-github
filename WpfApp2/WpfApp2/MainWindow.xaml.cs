@@ -170,6 +170,13 @@ namespace WpfApp2
                 passwordWindow.ShowDialog();
         }
 
+        private void Menu_Click(object sender, RoutedEventArgs e)
+        {
+
+            Window3 menuWindow = new Window3();
+            menuWindow.ShowDialog();
+        }
+
         private void Exit_Click(object sender, RoutedEventArgs e)
         {
             Application.Current.Shutdown();
@@ -201,6 +208,22 @@ namespace WpfApp2
                 stonex[k] = sx;
                 stoney[k] = sy;
             }
+
+            //// Configure save file dialog box
+            //var dialog = new SaveFileDialog();
+            //dialog.FileName = "Document"; // Default file name
+            //dialog.DefaultExt = ".txt"; // Default file extension
+            //dialog.Filter = "Text documents (.txt)|*.txt"; // Filter files by extension
+
+            //// Show save file dialog box
+            //bool? result = dialog.ShowDialog();
+
+            //// Process save file dialog box results
+            //if (result == true)
+            //{
+            //    // Save document
+            //    string filename = dialog.FileName;
+            //}
 
             Canvas.SetLeft(Bird, Posex);
             Canvas.SetTop(Bird, 380 - Posey);
@@ -242,10 +265,7 @@ namespace WpfApp2
             //MessageBox.Show("Конечная позиция по x: " + Math.Round(canvasx, 3) + "   " + "Конечная позиция по y: " + Math.Round(y, 3) + "   " + "Момент времени: " + Math.Round(delta_t * i, 3));
         }
 
-        private void Button_Click_1(object sender, RoutedEventArgs e)
-        {
 
-        }
     }
     
 

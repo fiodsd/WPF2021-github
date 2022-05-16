@@ -111,7 +111,7 @@
         <Button Width="100" Height="30" Content="Авторизация" Click="Login_Click" Grid.Column="1" Margin="443,10,10,101" />
         <Button Width="100" Height="30" Content="Выход" Click="Exit_Click" Margin="443,45,10,66" Grid.Column="1" />
         <Button Width="Auto" Height="30" Content="Пароль" Click="Password_Click" Margin="388,10,115,101" Grid.Column="1" />
-
+        <Button Width="Auto" Height="30" Content="Меню" Click="Menu_Click" Margin="388,45,115,66" Grid.Column="1" />
 
     </Grid>
 </Window>

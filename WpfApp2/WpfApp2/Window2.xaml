@@ -13,22 +13,7 @@
     <TextBlock Grid.ColumnSpan="2" FontSize ="30" Margin="47,21,40,10"><Run Text="           "/><LineBreak/><Run Text="         Пароль: 123"/></TextBlock>
 
 
+   
 
-
-    <!--<Grid Margin="10">
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="45*"/>
-            <ColumnDefinition Width="23*"/>
-        </Grid.ColumnDefinitions>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="20" />
-            <RowDefinition Height="20" />
-            <RowDefinition Height="Auto" />
-        </Grid.RowDefinitions>
-
-        <TextBlock Grid.ColumnSpan="2" Margin="25,5,24,0">Пароль: 123:</TextBlock>
-        <Button IsDefault="True" Click="Accept_Click" MinWidth="60" Margin="28,0" Content="OK" Grid.Row="1" Grid.ColumnSpan="2"/>
-
-    </Grid>-->
 </Window>
 
